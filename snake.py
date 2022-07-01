@@ -38,6 +38,9 @@ def game_over():
     body_number = len(all_pos)
     while True:
         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 pygame.quit()
                 sys.exit()
